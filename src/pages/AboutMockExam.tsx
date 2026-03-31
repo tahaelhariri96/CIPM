@@ -16,7 +16,7 @@ export default function AboutMockExamPage() {
 
       <AboutMockExamHero />
 
-      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '460px' }}>
+      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '530px' }}>
         <img
           src={group2511Svg}
           alt=""
