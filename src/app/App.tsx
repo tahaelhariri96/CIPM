@@ -1,13 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import HomePage from './HomePage';
-import AboutCIPMPage from '../pages/AboutCIPM';
-import AboutProjectManagementPage from './AboutProjectManagementPage';
-import AboutScrumMasterPage from '../pages/AboutScrumMaster';
-import AboutMockExamPage from '../pages/AboutMockExam';
-import InsightsPage from '../pages/Insights';
-import ContactPage from '../pages/Contact';
 import svgPaths from '../imports/svg-pt8brrterb';
+
+const AboutCIPMPage = lazy(() => import('../pages/AboutCIPM'));
+const AboutProjectManagementPage = lazy(() => import('./AboutProjectManagementPage'));
+const AboutScrumMasterPage = lazy(() => import('../pages/AboutScrumMaster'));
+const AboutMockExamPage = lazy(() => import('../pages/AboutMockExam'));
+const InsightsPage = lazy(() => import('../pages/Insights'));
+const ContactPage = lazy(() => import('../pages/Contact'));
 
 const DESIGN_WIDTH = 1728;
 
@@ -115,15 +116,17 @@ export default function App() {
             left: 0,
           }}
         >
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about-cipm" element={<AboutCIPMPage />} />
-            <Route path="/about-project-management" element={<AboutProjectManagementPage />} />
-            <Route path="/about-scrum-master" element={<AboutScrumMasterPage />} />
-            <Route path="/about-mock-exam" element={<AboutMockExamPage />} />
-            <Route path="/insights" element={<InsightsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about-cipm" element={<AboutCIPMPage />} />
+              <Route path="/about-project-management" element={<AboutProjectManagementPage />} />
+              <Route path="/about-scrum-master" element={<AboutScrumMasterPage />} />
+              <Route path="/about-mock-exam" element={<AboutMockExamPage />} />
+              <Route path="/insights" element={<InsightsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </Suspense>
         </div>
         <ScrollToTopButton scale={scale} />
       </div>
