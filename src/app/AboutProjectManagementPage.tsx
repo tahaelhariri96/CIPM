@@ -10,7 +10,7 @@ const SVG_W = 1728;
 
 export default function AboutProjectManagementPage() {
   return (
-    <div style={{ width: '1728px', backgroundColor: 'white', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ width: '1728px', backgroundColor: 'white', overflow: 'visible', display: 'flex', flexDirection: 'column' }}>
       {/* Navbar */}
       <div style={{ position: 'absolute', top: 0, left: 0, zIndex: 9999, width: '1728px' }}>
         <Navbar />
@@ -20,7 +20,7 @@ export default function AboutProjectManagementPage() {
       <AboutProjectManagementHero />
 
       {/* النصوص من Group 2507 كاملاً */}
-      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '200px' }}>
+      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '560px' }}>
         <img
           src={group2507Svg}
           alt=""
