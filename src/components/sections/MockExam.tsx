@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import svgPaths from '../../imports/svg-pt8brrterb';
-import mockImg from '../../assets/fda80a9771238dbb29aaf8ac678ef87b4ad41040.png';
+import mockImg from '../../assets/fda80a9771238dbb29aaf8ac678ef87b4ad41040.webp';
 
 // ── كومبوننت: صورة القسم ──────────────────────────────────────────────────────
 function MockExamImage() {

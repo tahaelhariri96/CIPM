@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import imgContact from '../../assets/Group 389.png';
+import imgContact from '../../assets/Group 389.webp';
 
 const OPTIONS = ['General Inquiry', 'Customer Support', 'Other'];
 

@@ -1,7 +1,7 @@
 import svgPaths from '../../imports/svg-pt8brrterb';
-import img1 from '../../assets/235944aac1c9c41d33c0cd99652bc3e536a5988b.png';
-import img2 from '../../assets/0a2e87dc5dfebfea8280d675c1e8b18b14cd9148.png';
-import img3 from '../../assets/bb581ef3fb72f5b2bb2b6400cf5d8b84009b08fb.png';
+import img1 from '../../assets/235944aac1c9c41d33c0cd99652bc3e536a5988b.webp';
+import img2 from '../../assets/0a2e87dc5dfebfea8280d675c1e8b18b14cd9148.webp';
+import img3 from '../../assets/bb581ef3fb72f5b2bb2b6400cf5d8b84009b08fb.webp';
 
 type Article = { title: string; date: string; img: string };
 

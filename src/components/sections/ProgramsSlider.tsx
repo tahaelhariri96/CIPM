@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import svgPaths from '../../imports/svg-pt8brrterb';
-import img04SmacBadgeLogo  from '../../assets/cf4a8004b8d2719ad7d3444fcdefddb661906228.png';
-import img05SmccBadgeLogo  from '../../assets/c6a09660194cfcd682326fcf4ff4f61ec44d08f0.png';
-import img03PmfcBadgeLogo  from '../../assets/096b689d0e5599c3ac89cb7134d0a17e410a6460.png';
-import img01PmacBadgeLogo  from '../../assets/d65e100de6f39e2dfcd66856a3fdb33272b1fdfd.png';
-import img02PmccBadgeLogo  from '../../assets/af1b79cf93e804a875053efbb57a858d27aed408.png';
-import img06SmfcBadgeLogo  from '../../assets/a7341730e28c9ccb3b327437eb064317cc2332b8.png';
+import img04SmacBadgeLogo  from '../../assets/cf4a8004b8d2719ad7d3444fcdefddb661906228.webp';
+import img05SmccBadgeLogo  from '../../assets/c6a09660194cfcd682326fcf4ff4f61ec44d08f0.webp';
+import img03PmfcBadgeLogo  from '../../assets/096b689d0e5599c3ac89cb7134d0a17e410a6460.webp';
+import img01PmacBadgeLogo  from '../../assets/d65e100de6f39e2dfcd66856a3fdb33272b1fdfd.webp';
+import img02PmccBadgeLogo  from '../../assets/af1b79cf93e804a875053efbb57a858d27aed408.webp';
+import img06SmfcBadgeLogo  from '../../assets/a7341730e28c9ccb3b327437eb064317cc2332b8.webp';
 
 // ── أنواع ─────────────────────────────────────────────────────────────────────
 type Theme = {

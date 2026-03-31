@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import svgPaths from '../../imports/svg-pt8brrterb';
-import img01BlackRedOriginalLogo1 from '../../assets/d8cdfa2dffa885f9ac0bc2c52abdbc8c7634dc42.png';
+import img01BlackRedOriginalLogo1 from '../../assets/d8cdfa2dffa885f9ac0bc2c52abdbc8c7634dc42.webp';
 
 // ── بيانات ────────────────────────────────────────────────────────────────────
 

@@ -1,5 +1,5 @@
 import svgPaths from '../../imports/svg-pt8brrterb';
-import imgCert from '../../assets/a79b36824a85e33aa29209599054a166ebc75de5.png';
+import imgCert from '../../assets/a79b36824a85e33aa29209599054a166ebc75de5.webp';
 
 const CERT_SHADOW = '9px 10px 36.7px 8px rgba(219,16,16,0.14), 10px 10px 30.6px 0px rgba(0,0,0,0.2)';
 

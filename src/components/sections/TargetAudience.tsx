@@ -1,8 +1,8 @@
-import img1 from '../../assets/0d224996d652739a2ed14345bfcce8c15cfdcde3.png';
-import img2 from '../../assets/ce87036de0f163b38609abda059d25fdb4d27ebe.png';
-import img3 from '../../assets/610d4915e8e66f9f659139165fcaae1a759a1978.png';
-import img4 from '../../assets/08785335084e7e5103ff43dfe54825941c0863ee.png';
-import img5 from '../../assets/87111671f09308d8ce2d8552c60afb3f983d9bef.png';
+import img1 from '../../assets/0d224996d652739a2ed14345bfcce8c15cfdcde3.webp';
+import img2 from '../../assets/ce87036de0f163b38609abda059d25fdb4d27ebe.webp';
+import img3 from '../../assets/610d4915e8e66f9f659139165fcaae1a759a1978.webp';
+import img4 from '../../assets/08785335084e7e5103ff43dfe54825941c0863ee.webp';
+import img5 from '../../assets/87111671f09308d8ce2d8552c60afb3f983d9bef.webp';
 
 // ── بيانات الفئات المستهدفة ───────────────────────────────────────────────────
 type AudienceItem = { title: string; img: string; h: string; l: string; t: string; w: string };

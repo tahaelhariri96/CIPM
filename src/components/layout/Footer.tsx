@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import svgPaths from '../../imports/svg-pt8brrterb';
-import img03WhiteRedOriginalLogo1 from '../../assets/d5a9445cbaa0423f577aba2b88dd9db5f7043e12.png';
+import img03WhiteRedOriginalLogo1 from '../../assets/d5a9445cbaa0423f577aba2b88dd9db5f7043e12.webp';
 
 // ── بيانات الروابط ────────────────────────────────────────────────────────────
 

@@ -22,7 +22,8 @@
     "@vitejs/plugin-react": "4.7.0",
     "sharp": "^0.34.5",
     "tailwindcss": "4.1.12",
-    "vite": "6.3.5"
+    "vite": "6.3.5",
+    "vite-plugin-imagemin": "^0.6.1"
   },
   "engines": {
     "node": ">=18"

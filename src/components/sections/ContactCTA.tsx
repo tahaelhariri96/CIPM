@@ -1,5 +1,5 @@
 import svgPaths from '../../imports/svg-pt8brrterb';
-import imgBg from '../../assets/12647b593b4cdded76efa4d26c6900faa5596b62.png';
+import imgBg from '../../assets/12647b593b4cdded76efa4d26c6900faa5596b62.webp';
 
 // الخلفية الزخرفية — تغطي الجزء العلوي فقط (h=223px) كما في التصميم الأصلي
 function DecorativeBackground() {

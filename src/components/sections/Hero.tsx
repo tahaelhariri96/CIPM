@@ -1,10 +1,10 @@
 import svgPaths from '../../imports/svg-pt8brrterb';
-import img1 from '../../assets/53c27109c9cf6bc39941d8193911e9dce4217a2e.png';
-import img2 from '../../assets/8818e9e0235a25477b8430b276627a22daf87c87.png';
-import img3 from '../../assets/f9292fcb6a3c35ac705ce7618c909ca87cb8a5ff.png';
-import img4 from '../../assets/73ca6d4707e7d66de00ac5d2a91ce5174a4439b6.png';
-import img5 from '../../assets/6193a6d7829a7b0a024ceee9004e212faab994b2.png';
-import imgLayer11 from '../../assets/293ce1547000488747b952d66afccdeaae372f60.png';
+import img1 from '../../assets/53c27109c9cf6bc39941d8193911e9dce4217a2e.webp';
+import img2 from '../../assets/8818e9e0235a25477b8430b276627a22daf87c87.webp';
+import img3 from '../../assets/f9292fcb6a3c35ac705ce7618c909ca87cb8a5ff.webp';
+import img4 from '../../assets/73ca6d4707e7d66de00ac5d2a91ce5174a4439b6.webp';
+import img5 from '../../assets/6193a6d7829a7b0a024ceee9004e212faab994b2.webp';
+import imgLayer11 from '../../assets/293ce1547000488747b952d66afccdeaae372f60.webp';
 
 // ── ثوابت التخطيط ─────────────────────────────────────────────────────────────
 const HERO_HEIGHT    = 975;

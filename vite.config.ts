@@ -2,6 +2,7 @@ import { defineConfig, Plugin } from 'vite'
 import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import viteImagemin from 'vite-plugin-imagemin'
 
 function figmaAssetPlugin(): Plugin {
   return {
@@ -17,11 +18,17 @@ function figmaAssetPlugin(): Plugin {
 
 export default defineConfig({
   plugins: [
-    // The React and Tailwind plugins are both required for Make, even if
-    // Tailwind is not being actively used – do not remove them
     react(),
     tailwindcss(),
     figmaAssetPlugin(),
+    viteImagemin({
+      gifsicle: { optimizationLevel: 7 },
+      optipng: { optimizationLevel: 7 },
+      mozjpeg: { quality: 80 },
+      pngquant: { quality: [0.7, 0.9], speed: 4 },
+      webp: { quality: 80 },
+      svgo: { plugins: [{ name: 'removeViewBox' }, { name: 'removeEmptyAttrs', active: false }] },
+    }),
   ],
   resolve: {
     alias: {
