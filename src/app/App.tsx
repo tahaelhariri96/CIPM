@@ -1,0 +1,132 @@
+import { useState, useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router';
+import HomePage from './HomePage';
+import AboutCIPMPage from '../pages/AboutCIPM';
+import AboutProjectManagementPage from './AboutProjectManagementPage';
+import AboutScrumMasterPage from '../pages/AboutScrumMaster';
+import AboutMockExamPage from '../pages/AboutMockExam';
+import InsightsPage from '../pages/Insights';
+import ContactPage from '../pages/Contact';
+import svgPaths from '../imports/svg-pt8brrterb';
+
+const DESIGN_WIDTH = 1728;
+
+function ScrollToTopButton({ scale }: { scale: number }) {
+  const [visible, setVisible] = useState(false);
+  const [bottom, setBottom] = useState(() => Math.round(24 * scale));
+
+  useEffect(() => {
+    const margin  = Math.round(24 * scale);
+    const btnSize = Math.round(56 * scale);
+
+    const update = () => {
+      setVisible(window.scrollY > 400);
+
+      const footer = document.getElementById('site-footer');
+      if (!footer) { setBottom(margin); return; }
+
+      const rect = footer.getBoundingClientRect();
+      const footerVisible = window.innerHeight - rect.top; // كم ظهر من الفوتر
+
+      if (footerVisible > 0) {
+        // الزر يرتفع بمقدار ما ظهر من الفوتر + هامش
+        setBottom(footerVisible + margin);
+      } else {
+        setBottom(margin);
+      }
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+    return () => window.removeEventListener('scroll', update);
+  }, [scale]);
+
+  if (!visible) return null;
+
+  const size     = Math.round(56 * scale);
+  const right    = Math.round(40 * scale);
+  const iconSize = Math.round(20 * scale);
+  const padding  = Math.round(18 * scale);
+  const border   = Math.max(1, Math.round(2 * scale));
+
+  return (
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      aria-label="Scroll to top"
+      style={{
+        position: 'fixed',
+        bottom,
+        right,
+        width:  size,
+        height: size,
+        padding,
+        borderRadius: size,
+        border: `${border}px solid #f09898`,
+        zIndex: 9999,
+        cursor: 'pointer',
+        backgroundColor: '#fbe7e7',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'bottom 0.15s ease, background-color 0.2s',
+      }}
+      onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#f6c6c6')}
+      onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#fbe7e7')}
+    >
+      <svg width={iconSize} height={iconSize} fill="none" viewBox="0 0 20 20">
+        <path d={svgPaths.p35164400} fill="#666766" />
+      </svg>
+    </button>
+  );
+}
+
+export default function App() {
+  const [scale, setScale] = useState(1);
+  const [contentHeight, setContentHeight] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const update = () => {
+      const s = window.innerWidth / DESIGN_WIDTH;
+      setScale(s);
+      if (contentRef.current) {
+        setContentHeight(contentRef.current.scrollHeight * s);
+      }
+    };
+    update();
+    window.addEventListener('resize', update);
+    const ro = new ResizeObserver(update);
+    if (contentRef.current) ro.observe(contentRef.current);
+    return () => { window.removeEventListener('resize', update); ro.disconnect(); };
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <div style={{ width: '100%', height: `${contentHeight}px`, overflowX: 'hidden', position: 'relative' }}>
+        <div
+          ref={contentRef}
+          style={{
+            width: `${DESIGN_WIDTH}px`,
+            transformOrigin: 'top left',
+            transform: `scale(${scale})`,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about-cipm" element={<AboutCIPMPage />} />
+            <Route path="/about-project-management" element={<AboutProjectManagementPage />} />
+            <Route path="/about-scrum-master" element={<AboutScrumMasterPage />} />
+            <Route path="/about-mock-exam" element={<AboutMockExamPage />} />
+            <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </div>
+        <ScrollToTopButton scale={scale} />
+      </div>
+    </BrowserRouter>
+  );
+}

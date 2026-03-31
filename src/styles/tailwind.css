@@ -1,0 +1,24 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+@theme {
+  /* Colors */
+  --color-primary: #BA0E0E;
+  --color-primary-hover: #9B0B0B;
+  --color-primary-light: #FBE7E7;
+  --color-primary-dark: #630707;
+  --color-primary-mid: #f6c6c6;
+
+  --color-dark: #272827;
+  --color-dark-light: #373837;
+  --color-dark-lighter: #666766;
+
+  --color-purple: #6B2E99;
+  --color-purple-light: #EDE6F3;
+  --color-purple-dark: #40006F;
+
+  /* Font */
+  --font-poppins: 'Poppins', sans-serif;
+}
