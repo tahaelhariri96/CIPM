@@ -20,7 +20,7 @@ export default function AboutProjectManagementPage() {
       <AboutProjectManagementHero />
 
       {/* النصوص من Group 2507 كاملاً */}
-      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '560px' }}>
+      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '300px' }}>
         <img
           src={group2507Svg}
           alt=""
