@@ -1,14 +1,27 @@
 import { useState, useEffect, useRef, lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router';
 import HomePage from './HomePage';
 import svgPaths from '../imports/svg-pt8brrterb';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 const AboutCIPMPage = lazy(() => import('../pages/AboutCIPM'));
+const AllCertificationsPage = lazy(() => import('../pages/AllCertifications'));
 const AboutProjectManagementPage = lazy(() => import('./AboutProjectManagementPage'));
 const AboutScrumMasterPage = lazy(() => import('../pages/AboutScrumMaster'));
 const AboutMockExamPage = lazy(() => import('../pages/AboutMockExam'));
 const InsightsPage = lazy(() => import('../pages/Insights'));
 const ContactPage = lazy(() => import('../pages/Contact'));
+const CertPMFCPage = lazy(() => import('../pages/CertPMFC'));
+const CertPMCCPage = lazy(() => import('../pages/CertPMCC'));
+const CertPMACPage = lazy(() => import('../pages/CertPMAC'));
+const CertAPPCPage = lazy(() => import('../pages/CertAPPC'));
+const CertAPMFPage = lazy(() => import('../pages/CertAPMF'));
+const CertAPMAPage = lazy(() => import('../pages/CertAPMA'));
 
 const DESIGN_WIDTH = 1728;
 
@@ -104,6 +117,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div style={{ width: '100%', height: `${contentHeight}px`, overflowX: 'hidden', position: 'relative' }}>
         <div
           ref={contentRef}
@@ -120,11 +134,18 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about-cipm" element={<AboutCIPMPage />} />
+              <Route path="/all-certifications" element={<AllCertificationsPage />} />
               <Route path="/about-project-management" element={<AboutProjectManagementPage />} />
               <Route path="/about-scrum-master" element={<AboutScrumMasterPage />} />
               <Route path="/about-mock-exam" element={<AboutMockExamPage />} />
               <Route path="/insights" element={<InsightsPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/cert-pmfc" element={<CertPMFCPage />} />
+              <Route path="/cert-pmcc" element={<CertPMCCPage />} />
+              <Route path="/cert-pmac" element={<CertPMACPage />} />
+              <Route path="/cert-appc" element={<CertAPPCPage />} />
+              <Route path="/cert-apmf" element={<CertAPMFPage />} />
+              <Route path="/cert-apma" element={<CertAPMAPage />} />
             </Routes>
           </Suspense>
         </div>

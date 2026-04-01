@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import svgPaths from '../../imports/svg-pt8brrterb';
 import img1 from '../../assets/53c27109c9cf6bc39941d8193911e9dce4217a2e.webp';
 import img2 from '../../assets/8818e9e0235a25477b8430b276627a22daf87c87.webp';
@@ -202,6 +203,7 @@ function SpinningDecoration() {
 
 // ── كومبوننت: النص الرئيسي والأزرار ─────────────────────────────────────────
 function HeroContent() {
+  const navigate = useNavigate();
   return (
     <div
       className="absolute flex flex-col gap-[24px] items-center"
@@ -216,7 +218,7 @@ function HeroContent() {
         </p>
       </div>
       <div className="flex gap-[24px] items-center">
-        <button className="bg-[#ba0e0e] flex gap-[12px] h-[56px] items-center justify-center px-[24px] rounded-[12px] border-none cursor-pointer hover:bg-[#9e0c0c] transition-colors duration-200">
+        <button onClick={() => navigate('/all-certifications')} className="bg-[#ba0e0e] flex gap-[12px] h-[56px] items-center justify-center px-[24px] rounded-[12px] border-none cursor-pointer hover:bg-[#9e0c0c] transition-colors duration-200">
           <span className="font-['Poppins',sans-serif] leading-[1.4] text-[#fbe7e7] text-[18px] whitespace-nowrap">
             Explore Certifications
           </span>

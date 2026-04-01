@@ -4,9 +4,21 @@ import img03WhiteRedOriginalLogo1 from '../../assets/d5a9445cbaa0423f577aba2b88d
 
 // ── بيانات الروابط ────────────────────────────────────────────────────────────
 
-const CERT_PM_LINKS = ['CIPM-PMFC', 'CIPM-PMCC', 'CIPM-PMAC'];
-const CERT_SM_LINKS = ['CIPM-SMFC', 'CIPM-SMCC', 'CIPM-SMAC'];
-const LEARNING_LINKS = ['All Certifications', 'Mock Exams', 'Verify Certificate'];
+const CERT_PM_LINKS = [
+  { label: 'CIPM-PMFC', href: '/cert-pmfc' },
+  { label: 'CIPM-PMCC', href: '/cert-pmcc' },
+  { label: 'CIPM-PMAC', href: '/cert-pmac' },
+];
+const CERT_SM_LINKS = [
+  { label: 'CIPM-APMF', href: '/cert-apmf' },
+  { label: 'CIPM-APPC', href: '/cert-appc' },
+  { label: 'CIPM-APMA', href: '/cert-apma' },
+];
+const LEARNING_LINKS = [
+  { label: 'All Certifications', href: '/all-certifications' },
+  { label: 'Mock Exams', href: '/about-mock-exam' },
+  { label: 'Verify Certificate', href: '#' },
+];
 const INSIGHTS_LINKS = [
   { label: 'Blog', href: '/insights' },
   { label: 'FAQs', href: '/insights' },
@@ -16,7 +28,7 @@ const COMPANY_LINKS = [
   { label: 'About THE CIPM', href: '/about-cipm' },
   { label: 'About Mock Exam', href: '/about-mock-exam' },
   { label: 'About Project Management', href: '/about-project-management' },
-  { label: 'About Scrum Master', href: '/about-scrum-master' },
+  { label: 'About Agile Project Management', href: '/about-scrum-master' },
 ];
 const LEGAL_LINKS = [
   { label: 'Contact Us', href: '/contact' },
@@ -127,11 +139,12 @@ function SocialIcons() {
 // ── الصف الأول: شعار + سوشيال + لغة ─────────────────────────────────────────
 
 function FirstLine() {
+  const navigate = useNavigate();
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full z-[5]" data-name="First-line">
       {/* Logo */}
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[235px]">
-        <div className="content-stretch flex items-center relative shrink-0" data-name="Navbar Brand">
+        <div className="content-stretch flex items-center relative shrink-0 cursor-pointer" data-name="Navbar Brand" onClick={() => navigate('/')}>
           <div className="h-[51px] relative shrink-0 w-[207px]">
             <div className="-translate-x-1/2 absolute aspect-[1303/322] bottom-0 left-1/2 top-0">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img03WhiteRedOriginalLogo1} />
@@ -182,7 +195,7 @@ function FooterLinksGrid() {
         <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0">
           <div className="content-stretch flex flex-col gap-[4px] items-center not-italic relative shrink-0 whitespace-nowrap">
             <p className="font-['Poppins:SemiBold',sans-serif] leading-[1.2] opacity-0 relative shrink-0 text-[18px] text-white">Certifications</p>
-            <p className="font-['Poppins:Light',sans-serif] leading-[1.4] relative shrink-0 text-[#c4c5c4] text-[14px]">Scrum Master</p>
+            <p className="font-['Poppins:Light',sans-serif] leading-[1.4] relative shrink-0 text-[#c4c5c4] text-[14px]">Agile Project Management</p>
           </div>
           <FooterLinksColumn links={CERT_SM_LINKS} />
         </div>

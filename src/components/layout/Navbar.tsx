@@ -6,20 +6,20 @@ import img01BlackRedOriginalLogo1 from '../../assets/d8cdfa2dffa885f9ac0bc2c52ab
 // ── بيانات ────────────────────────────────────────────────────────────────────
 
 const PM_CERTS = [
-  { title: 'CIPM-PMFC', desc: 'Project Management Foundation Certificate' },
-  { title: 'CIPM-PMCC', desc: 'Project Management Core Certificate' },
-  { title: 'CIPM-PMAC', desc: 'Project Management Advanced Certificate' },
+  { title: 'CIPM-PMFC', desc: 'Project Management Foundation Certificate', href: '/cert-pmfc' },
+  { title: 'CIPM-PMCC', desc: 'Project Management Core Certificate',       href: '/cert-pmcc' },
+  { title: 'CIPM-PMAC', desc: 'Project Management Advanced Certificate',   href: '/cert-pmac' },
 ];
 const SM_CERTS = [
-  { title: 'CIPM-SMFC', desc: 'Scrum Master Foundation Certificate' },
-  { title: 'CIPM-SMCC', desc: 'Scrum Master Core Certificate' },
-  { title: 'CIPM-SMAC', desc: 'Scrum Master Advanced Certificate' },
+  { title: 'CIPM-APMF', desc: 'Agile Project Management Foundation',       href: '/cert-apmf' },
+  { title: 'CIPM-APPC', desc: 'Agile Project Practitioner Certificate',    href: '/cert-appc' },
+  { title: 'CIPM-APMA', desc: 'Agile Project Management Advanced',         href: '/cert-apma' },
 ];
 const ABOUT_ITEMS = [
   { id: 1, title: 'About THE CIPM',            href: '/about-cipm' },
   { id: 2, title: 'About Mock Exam',            href: '/about-mock-exam' },
   { id: 3, title: 'About Project Management',   href: '/about-project-management' },
-  { id: 4, title: 'About Scrum Master',         href: '/about-scrum-master' },
+  { id: 4, title: 'About Agile Project Management', href: '/about-scrum-master' },
 ];
 
 // ── أيقونات ───────────────────────────────────────────────────────────────────
@@ -76,9 +76,10 @@ function DropdownTrigger({ label, open }: { label: string; open: boolean }) {
 }
 
 // ── عنصر شهادة واحد ──────────────────────────────────────────────────────────
-function CertItem({ color, title, desc }: { color: string; title: string; desc: string }) {
+function CertItem({ color, title, desc, href }: { color: string; title: string; desc: string; href: string }) {
+  const navigate = useNavigate();
   return (
-    <div className="flex flex-row items-start gap-[8px] p-[8px] rounded-[8px] cursor-pointer hover:bg-gray-50 transition-colors group">
+    <div className="flex flex-row items-start gap-[8px] p-[8px] rounded-[8px] cursor-pointer hover:bg-gray-50 transition-colors group" onClick={() => navigate(href)}>
       <CertBadgeIcon color={color} />
       <div className="flex-1 flex flex-col">
         <p className="font-['Poppins',sans-serif] font-normal text-[18px] leading-[1.2]" style={{ color }}>{title}</p>
@@ -94,6 +95,7 @@ function CertItem({ color, title, desc }: { color: string; title: string; desc: 
 // ── قائمة Certifications ──────────────────────────────────────────────────────
 function CertificationsMegaMenu() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -117,7 +119,7 @@ function CertificationsMegaMenu() {
           </p>
           <div className="flex flex-col gap-[16px]">
             <div className="flex items-center gap-[8px] cursor-pointer group">
-              <p className="font-['Poppins',sans-serif] font-normal text-[#40006F] text-[18px] leading-[1.4]">All Certifications</p>
+              <p className="font-['Poppins',sans-serif] font-normal text-[#40006F] text-[18px] leading-[1.4]" onClick={() => navigate('/all-certifications')}>All Certifications</p>
               <ArrowRightIcon className="group-hover:translate-x-1 transition-transform" />
             </div>
             <hr className="border-[#D4C2E1]" />
@@ -125,13 +127,13 @@ function CertificationsMegaMenu() {
               <div className="flex flex-col flex-1 gap-[16px]">
                 <p className="font-['Poppins',sans-serif] font-semibold text-[#6B2E99] text-[18px] leading-[1.2] border-b border-[#D4C2E1] pb-[8px]">Project Management</p>
                 <div className="flex flex-col gap-[8px]">
-                  {PM_CERTS.map((c) => <CertItem key={c.title} color="#6B2E99" title={c.title} desc={c.desc} />)}
+                  {PM_CERTS.map((c) => <CertItem key={c.title} color="#6B2E99" title={c.title} desc={c.desc} href={c.href} />)}
                 </div>
               </div>
               <div className="flex flex-col flex-1 gap-[16px]">
-                <p className="font-['Poppins',sans-serif] font-semibold text-[#760076] text-[18px] leading-[1.2] border-b border-[#E3C2E3] pb-[8px]">Scrum Master</p>
+                <p className="font-['Poppins',sans-serif] font-semibold text-[#760076] text-[18px] leading-[1.2] border-b border-[#E3C2E3] pb-[8px]">Agile Project Management</p>
                 <div className="flex flex-col gap-[8px]">
-                  {SM_CERTS.map((c) => <CertItem key={c.title} color="#A02EA0" title={c.title} desc={c.desc} />)}
+                  {SM_CERTS.map((c) => <CertItem key={c.title} color="#A02EA0" title={c.title} desc={c.desc} href={c.href} />)}
                 </div>
               </div>
             </div>
@@ -235,8 +237,9 @@ function NavbarActions() {
 
 // ── الشعار ────────────────────────────────────────────────────────────────────
 function NavbarBrand() {
+  const navigate = useNavigate();
   return (
-    <div className="flex items-end relative shrink-0 w-[330px]">
+    <div className="flex items-end relative shrink-0 w-[330px] cursor-pointer" onClick={() => navigate('/')}>
       <div className="h-[51px] relative shrink-0 w-[207px]">
         <div className="-translate-x-1/2 absolute aspect-[1303/322] bottom-0 left-1/2 top-0">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img01BlackRedOriginalLogo1} />
