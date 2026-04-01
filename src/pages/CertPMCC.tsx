@@ -43,16 +43,19 @@ function IconArrowRight({ color = "white", size = 20 }: { color?: string; size?:
 }
 
 function HeroSection() {
+  const navigate = useNavigate();
   return (
-    <div style={{ position: "relative", overflow: "hidden", backgroundColor: theme.bg }}>
+    <div style={{ position: "relative", overflow: "hidden", backgroundColor: theme.bg, height: "300px" }}>
       <svg
         viewBox="0 0 1926 498"
         preserveAspectRatio="xMidYMid slice"
         style={{
           position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
+          top: "6px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "1926px",
+          height: "498px",
           pointerEvents: "none",
         }}
       >
@@ -75,78 +78,111 @@ function HeroSection() {
         />
       </svg>
 
-      <div style={{ ...innerContainer, position: "relative", paddingTop: "56px", paddingBottom: "100px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "48px" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px", flexShrink: 0 }}>
-            <div
-              style={{
-                backgroundColor: "#d4c2e1",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "56px",
-                height: "56px",
-                borderRadius: "12px",
-                cursor: "pointer",
-                padding: "16px",
-              }}
-            >
-              <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                <path d={svgPaths.p357c6700} fill={theme.darkPrimary} />
-              </svg>
-            </div>
-            <div style={{ boxShadow: "0px 0px 30px 0px rgba(104,23,163,0.54)" }}>
-              <img
-                src={img02PmccBadgeLogo}
-                alt="CIPM-PMCC Badge"
-                style={{ width: "228px", height: "211px", objectFit: "contain", display: "block", background: "transparent", mixBlendMode: "multiply" }}
-              />
-            </div>
-          </div>
+      <div
+        onClick={() => navigate('/all-certifications')}
+        style={{
+          position: "absolute",
+          top: "24px",
+          left: "246px",
+          backgroundColor: "#d4c2e1",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "56px",
+          height: "56px",
+          borderRadius: "12px",
+          cursor: "pointer",
+        }}
+      >
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
+          <path d={svgPaths.p357c6700} fill={theme.darkPrimary} />
+        </svg>
+      </div>
 
-          <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "24px" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-              <p style={{ ...fw600, fontSize: "46px", color: theme.primary, lineHeight: 1.2, margin: 0 }}>
-                CIPM-PMCC
-              </p>
-              <p style={{ ...fw400, fontSize: "20px", color: "#535453", lineHeight: 1.2, margin: 0 }}>
-                Project Management Core Certificate
-              </p>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <p style={{ ...fw400, fontSize: "24px", color: theme.headingColor, lineHeight: 1.2, margin: 0 }}>
-                Take Your Project Management Career to the Next Level
-              </p>
-              <p style={{ ...fw300, fontSize: "18px", color: theme.primary, lineHeight: 1.4, margin: 0 }}>
-                Build on existing knowledge and master core methodologies used by senior project managers.
-              </p>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ ...fw300, fontSize: "16px", color: theme.buttonBg, lineHeight: 1.4 }}>Total Fee</span>
-              <span style={{ ...fw600, fontSize: "18px", color: theme.primary, lineHeight: 1.2 }}>$300</span>
-              <button
-                style={{
-                  backgroundColor: theme.buttonBg,
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "12px 24px",
-                  borderRadius: "12px",
-                  ...fw400,
-                  fontSize: "16px",
-                  lineHeight: 1.4,
-                  border: "none",
-                  cursor: "pointer",
-                  height: "44px",
-                }}
-              >
-                Register Now
-                <IconArrowRight />
-              </button>
-            </div>
-          </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "24px",
+          left: "334px",
+          width: "260px",
+          height: "240px",
+          filter: "drop-shadow(0px 0px 30px rgba(104,23,163,0.54))",
+        }}
+      >
+        <img
+          src={img02PmccBadgeLogo}
+          alt="CIPM-PMCC Badge"
+          style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", mixBlendMode: "multiply" }}
+        />
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "592px",
+          width: "826px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          <p style={{ ...fw600, fontSize: "46px", color: theme.darkPrimary, lineHeight: 1.2, margin: 0 }}>
+            CIPM-PMCC
+          </p>
+          <p style={{ ...fw400, fontSize: "20px", color: "#535453", lineHeight: 1.2, margin: 0 }}>
+            Project Management Core Certificate
+          </p>
         </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          <p style={{ ...fw400, fontSize: "24px", color: theme.headingColor, lineHeight: 1.2, margin: 0 }}>
+            Take Your Project Management Career to the Next Level
+          </p>
+          <p style={{ ...fw300, fontSize: "18px", color: theme.primary, lineHeight: 1.4, margin: 0 }}>
+            Build on existing knowledge and master core methodologies used by senior project managers.
+          </p>
+        </div>
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: "237px",
+          left: "1064px",
+          width: "354px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
+          <span style={{ ...fw300, fontSize: "16px", color: theme.buttonBg, lineHeight: 1.4 }}>Total Fee</span>
+          <span style={{ ...fw600, fontSize: "18px", color: theme.primary, lineHeight: 1.2 }}>$300</span>
+        </div>
+        <button
+          style={{
+            backgroundColor: theme.buttonBg,
+            color: "white",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+            padding: "0 24px",
+            borderRadius: "12px",
+            ...fw400,
+            fontSize: "16px",
+            lineHeight: 1,
+            border: "none",
+            cursor: "pointer",
+            height: "44px",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+          }}
+        >
+          Register Now
+          <IconArrowRight />
+        </button>
       </div>
     </div>
   );

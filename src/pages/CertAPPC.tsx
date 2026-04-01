@@ -873,7 +873,7 @@ function OtherProgramsSlider() {
               </div>
             </div>
           </div>
-          <img src={slide.icon} alt="" style={{ width: '120px', height: '120px', objectFit: 'contain', flexShrink: 0, opacity: 0.9 }} />
+          <img src={slide.icon} alt="" style={{ width: '120px', flexShrink: 0, opacity: 0.9 }} />
         </div>
 
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '373px', width: '790px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 30 }}>

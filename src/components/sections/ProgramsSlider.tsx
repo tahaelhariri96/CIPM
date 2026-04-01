@@ -110,7 +110,7 @@ function BadgeCarousel({ activeIndex }: { activeIndex: number }) {
     <>
       {SLIDES.map((s, i) => (
         <div key={i} className="absolute transition-all duration-500 ease-in-out left-0 top-0" style={getBadgeStyle(i, activeIndex)}>
-          <img alt={s.code} className={`absolute mix-blend-multiply size-full ${s.isSvg ? 'object-fill' : 'object-contain'}`} src={s.logo} />
+          <img alt={s.code} className="absolute mix-blend-multiply size-full object-contain" src={s.logo} />
         </div>
       ))}
     </>
