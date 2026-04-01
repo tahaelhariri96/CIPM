@@ -261,15 +261,12 @@ function AudienceIconWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        backgroundColor: "white",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         width: "76px",
         height: "76px",
-        borderRadius: "72px",
         flexShrink: 0,
-        padding: "12px",
       }}
     >
       {children}
@@ -279,8 +276,9 @@ function AudienceIconWrapper({ children }: { children: React.ReactNode }) {
 
 function GradCapSvg() {
   return (
-    <div style={{ width: "52px", height: "34px", position: "relative", overflow: "hidden" }}>
-      <svg viewBox="0 0 52 33.9007" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fill="none">
+    <svg width="76" height="76" viewBox="0 0 76 76" fill="none">
+      <circle cx="38" cy="38" r="38" fill="white"/>
+      <g transform="translate(12, 21)">
         <path d={svgPaths.p1c7de700} fill="#FFC244" />
         <path d={svgPaths.pb8a0140} fill="#FFD05B" />
         <path d={svgPaths.p2b67eb00} fill="#FFC244" />
@@ -290,15 +288,16 @@ function GradCapSvg() {
         <path d={svgPaths.p2f7dbe00} fill="#615260" />
         <path d={svgPaths.p10251300} fill="#FFE077" />
         <path d={svgPaths.p20f5af00} fill="#4E3D4D" />
-      </svg>
-    </div>
+      </g>
+    </svg>
   );
 }
 
 function LaptopSvg() {
   return (
-    <div style={{ width: "47px", height: "37px", position: "relative", overflow: "hidden" }}>
-      <svg viewBox="0 0 47.0812 37.3459" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fill="none">
+    <svg width="76" height="76" viewBox="0 0 76 76" fill="none">
+      <circle cx="38" cy="38" r="38" fill="white"/>
+      <g transform="translate(14.5, 19.5)">
         <path d={svgPaths.p7ff4400} fill="#DFD0C9" />
         <path d={svgPaths.p320097b0} fill="#B4AAAA" />
         <path d={svgPaths.p27a05800} fill="#4E3D4D" />
@@ -306,15 +305,16 @@ function LaptopSvg() {
         <path d={svgPaths.p2ab27800} fill="#EBDED9" />
         <path d={svgPaths.p1b9e4000} fill="#DAD0CB" />
         <path d={svgPaths.p1ff6300} fill="#DAD0CB" />
-      </svg>
-    </div>
+      </g>
+    </svg>
   );
 }
 
 function BriefcaseSvg() {
   return (
-    <div style={{ width: "47px", height: "40px", position: "relative", overflow: "hidden" }}>
-      <svg viewBox="0 0 47.081 39.6231" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fill="none">
+    <svg width="76" height="76" viewBox="0 0 76 76" fill="none">
+      <circle cx="38" cy="38" r="38" fill="white"/>
+      <g transform="translate(14.5, 18)">
         <path d={svgPaths.pd65f900} fill="#F29F5C" />
         <path d={svgPaths.pe7a9300} fill="#E08546" />
         <path d={svgPaths.p15e8100} fill="#E08546" />
@@ -327,8 +327,8 @@ function BriefcaseSvg() {
         <path d={svgPaths.p6f7e00} fill="#E59F6A" />
         <path d={svgPaths.p14f7b800} fill="#5C9CEE" />
         <path d={svgPaths.p2fe76e80} fill="#F2DF33" />
-      </svg>
-    </div>
+      </g>
+    </svg>
   );
 }
 
@@ -454,7 +454,9 @@ function TopicsSection() {
     <div style={{ backgroundColor: "white" }}>
       <div style={{ ...innerContainer, paddingTop: "56px", paddingBottom: "56px" }}>
         <div style={{ display: "flex", gap: "65px", alignItems: "center", minHeight: "438px" }}>
-          <BalloonIllustration />
+          <div style={{ width: "203px", height: "284px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <img src={icoPmfc} alt="PMFC Icon" style={{ width: "180px", height: "auto", objectFit: "contain" }} />
+          </div>
           <div style={{ flex: 1 }}>
             <p style={{ ...fw600, fontSize: "28px", color: "#373837", lineHeight: 1.2, margin: "0 0 16px" }}>
               What are the main topics covered in this program?
@@ -653,7 +655,7 @@ function StepIconWrapper({ children }: { children: React.ReactNode }) {
         justifyContent: "center",
         width: "64px",
         height: "64px",
-        borderRadius: "56px",
+        borderRadius: "50%",
         flexShrink: 0,
       }}
     >
@@ -664,12 +666,10 @@ function StepIconWrapper({ children }: { children: React.ReactNode }) {
 
 function CertSmallIcon() {
   return (
-    <div style={{ position: "relative", width: "32px", height: "32px" }}>
-      <div style={{ position: "absolute", inset: "8.33% 4.17% 2.08% 12.5%" }}>
-        <svg viewBox="0 0 26.6667 28.6667" style={{ width: "100%", height: "100%" }} fill="none">
-          <path d={svgPaths.p7f21900} fill={theme.primary} />
-        </svg>
-      </div>
+    <div style={{ position: "relative", width: "48px", height: "48px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <svg viewBox="0 0 26.6667 28.6667" style={{ width: "100%", height: "100%" }} fill="none">
+        <path d={svgPaths.p7f21900} fill={theme.primary} />
+      </svg>
     </div>
   );
 }
@@ -678,7 +678,7 @@ function EasyJoinSection() {
   const steps = [
     {
       icon: (
-        <svg width={32} height={32} viewBox="0 0 32 32" fill="none">
+        <svg width={48} height={48} viewBox="0 0 32 32" fill="none">
           <path d={svgPaths.p1572fa80} fill={theme.primary} />
         </svg>
       ),
@@ -687,7 +687,7 @@ function EasyJoinSection() {
     },
     {
       icon: (
-        <svg width={32} height={32} viewBox="0 0 32 32" fill="none">
+        <svg width={48} height={48} viewBox="0 0 32 32" fill="none">
           <path d={svgPaths.p3ccf5900} fill={theme.primary} />
         </svg>
       ),
@@ -696,7 +696,7 @@ function EasyJoinSection() {
     },
     {
       icon: (
-        <svg width={32} height={32} viewBox="0 0 32 32" fill="none">
+        <svg width={48} height={48} viewBox="0 0 32 32" fill="none">
           <path d={svgPaths.p27aee580} fill={theme.primary} />
         </svg>
       ),

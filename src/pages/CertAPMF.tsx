@@ -5,13 +5,14 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import svgPaths from "../imports/svg-2m43jtwopl";
 import svgPathsSlider from "../imports/svg-pt8brrterb";
-import img03PmfcBadgeLogo from "../assets/03. PMFC Badge Logo.svg";
-import imgCipmPmfc1 from "../assets/CIPM-PMFC-1.svg";
-import img01PmacBadgeLogo from "../assets/01. PMAC Badge Logo 2.svg";
-import img02PmccBadgeLogo from "../assets/02. PMCC Badge Logo 1.svg";
-import icoPmfc from '../assets/PMFC ICO.svg';
-import icoPmcc from '../assets/PMCC ICO.svg';
-import icoPmac from '../assets/PMAC ICO.svg';
+import img06SmfcBadgeLogo from "../assets/06. SMFC Badge Logog.svg";
+import imgApmf1 from "../assets/apmf1.svg";
+import img04SmacBadgeLogo from "../assets/04. SMAC Badge Logo.svg";
+import img05SmccBadgeLogo from "../assets/05. SMCC Badge Logo.svg";
+import icoApmf from '../assets/APMF ICO.svg';
+import icoAppc from '../assets/APPC ICO.svg';
+import icoApma from '../assets/APMA ICO.svg';
+
 
 const poppins = { fontFamily: "'Poppins', sans-serif" } as const;
 const fw300 = { ...poppins, fontWeight: 300 } as const;
@@ -46,15 +47,17 @@ function IconArrowRight({ color = "white", size = 20 }: { color?: string; size?:
 function HeroSection() {
   const navigate = useNavigate();
   return (
-    <div style={{ position: "relative", overflow: "hidden", backgroundColor: theme.bg }}>
+    <div style={{ position: "relative", overflow: "hidden", backgroundColor: theme.bg, height: "300px" }}>
       <svg
         viewBox="0 0 1926 498"
         preserveAspectRatio="xMidYMid slice"
         style={{
           position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
+          top: "6px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "1926px",
+          height: "498px",
           pointerEvents: "none",
         }}
       >
@@ -77,80 +80,111 @@ function HeroSection() {
         />
       </svg>
 
-      <div style={{ ...innerContainer, position: "relative", paddingTop: "56px", paddingBottom: "100px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "48px" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px", flexShrink: 0 }}>
-            <div
-              onClick={() => navigate('/all-certifications')}
-              style={{
-                backgroundColor: "#e5d1e8",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "56px",
-                height: "56px",
-                borderRadius: "12px",
-                cursor: "pointer",
-                padding: "16px",
-              }}
-            >
-              <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                <path d={svgPaths.p357c6700} fill={theme.darkPrimary} />
-              </svg>
-            </div>
-            <div>
-              <img
-                src={img03PmfcBadgeLogo}
-                alt="CIPM-PMFC Badge"
-                style={{ width: "228px", height: "211px", objectFit: "contain", display: "block", mixBlendMode: "multiply" }}
-              />
-            </div>
-          </div>
+      <div
+        onClick={() => navigate('/all-certifications')}
+        style={{
+          position: "absolute",
+          top: "24px",
+          left: "246px",
+          backgroundColor: "#e5d1e8",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "56px",
+          height: "56px",
+          borderRadius: "12px",
+          cursor: "pointer",
+        }}
+      >
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
+          <path d={svgPaths.p357c6700} fill={theme.darkPrimary} />
+        </svg>
+      </div>
 
-          <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "24px" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-              <p style={{ ...fw600, fontSize: "46px", color: theme.primary, lineHeight: 1.2, margin: 0 }}>
-                CIPM-PMFC
-              </p>
-              <p style={{ ...fw400, fontSize: "20px", color: "#535453", lineHeight: 1.2, margin: 0 }}>
-                Project Management Foundation Certificate
-              </p>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <p style={{ ...fw400, fontSize: "24px", color: theme.headingColor, lineHeight: 1.2, margin: 0 }}>
-                Your Gateway to a Professional Career
-              </p>
-              <p style={{ ...fw300, fontSize: "18px", color: theme.primary, lineHeight: 1.4, margin: 0 }}>
-                Build strong project delivery fundamentals through a highly accessible and comprehensive
-                entry-level certification
-              </p>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ ...fw300, fontSize: "16px", color: theme.buttonBg, lineHeight: 1.4 }}>Total Fee</span>
-              <span style={{ ...fw600, fontSize: "18px", color: theme.primary, lineHeight: 1.2 }}>$250</span>
-              <button
-                style={{
-                  backgroundColor: theme.buttonBg,
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "12px 24px",
-                  borderRadius: "12px",
-                  ...fw400,
-                  fontSize: "16px",
-                  lineHeight: 1.4,
-                  border: "none",
-                  cursor: "pointer",
-                  height: "44px",
-                }}
-              >
-                Register Now
-                <IconArrowRight />
-              </button>
-            </div>
-          </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "24px",
+          left: "334px",
+          width: "260px",
+          height: "240px",
+          filter: "drop-shadow(0px 0px 30px rgba(160,46,160,0.54))",
+        }}
+      >
+        <img
+          src={img06SmfcBadgeLogo}
+          alt="CIPM-APMF Badge"
+          style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", mixBlendMode: "multiply" }}
+        />
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "592px",
+          width: "826px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          <p style={{ ...fw600, fontSize: "46px", color: theme.darkPrimary, lineHeight: 1.2, margin: 0 }}>
+            CIPM-APMF
+          </p>
+          <p style={{ ...fw400, fontSize: "20px", color: "#535453", lineHeight: 1.2, margin: 0 }}>
+            Agile Project Management Foundation
+          </p>
         </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          <p style={{ ...fw400, fontSize: "24px", color: theme.headingColor, lineHeight: 1.2, margin: 0 }}>
+            Your Foundation in Agile Project Delivery
+          </p>
+          <p style={{ ...fw300, fontSize: "18px", color: theme.primary, lineHeight: 1.4, margin: 0 }}>
+            Build a practical understanding of Agile principles, iterative delivery, and collaborative project practices—designed for professionals ready to lead adaptive, value-driven work.
+          </p>
+        </div>
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: "250px",
+          left: "1064px",
+          width: "354px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
+          <span style={{ ...fw300, fontSize: "16px", color: theme.buttonBg, lineHeight: 1.4 }}>Total Fee</span>
+          <span style={{ ...fw600, fontSize: "18px", color: theme.primary, lineHeight: 1.2 }}>$200</span>
+        </div>
+        <button
+          style={{
+            backgroundColor: theme.buttonBg,
+            color: "white",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+            padding: "0 24px",
+            borderRadius: "12px",
+            ...fw400,
+            fontSize: "16px",
+            lineHeight: 1,
+            border: "none",
+            cursor: "pointer",
+            height: "44px",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+          }}
+        >
+          Register Now
+          <IconArrowRight />
+        </button>
       </div>
     </div>
   );
@@ -162,7 +196,7 @@ function InfoCard() {
     { label: "Format", value: "Online", bg: "white", pt: "12px", pb: "12px" },
     { label: "Time Limit", value: "120 Minutes", bg: theme.bg, pt: "12px", pb: "12px" },
     { label: "Estimated Effort", value: "35 Hours", bg: "white", pt: "12px", pb: "12px" },
-    { label: "Length", value: "90 Multiple Choice Questions.", bg: theme.bg, pt: "12px", pb: "16px" },
+    { label: "Length", value: "75 Multiple Choice Questions.", bg: theme.bg, pt: "12px", pb: "16px" },
   ];
   return (
     <div
@@ -199,6 +233,7 @@ function InfoCard() {
 }
 
 function OverviewSection() {
+  const [showMore, setShowMore] = useState(false);
   return (
     <div style={{ backgroundColor: "white" }}>
       <div style={{ ...innerContainer, paddingTop: "56px", paddingBottom: "56px" }}>
@@ -208,13 +243,37 @@ function OverviewSection() {
               Overview:
             </p>
             <p style={{ ...fw300, fontSize: "18px", color: "#535453", lineHeight: 1.4, margin: 0 }}>
-              The CIPM-PMFC (Project Management Foundation Certificate) is an entry-level professional credential
-              designed for motivated professionals and career changers seeking to build practical project management
-              capability from the ground up. This program covers essential methodologies, terminology, and processes
-              required to plan and deliver projects successfully across industries. Whether pursuing a first project
-              management role or strengthening current responsibilities, the CIPM-PMFC confirms credible foundational
-              knowledge and prepares learners to contribute with confidence and competence.
+              The CIPM-APMF (Agile Project Management Foundation) is an entry-level certificate designed for individuals who want a structured, practical introduction to Agile project management. It is ideal for learners with little to no prior Agile experience who want to understand how iterative delivery works in real project environments and how to apply Agile principles to improve outcomes, responsiveness, and stakeholder satisfaction.
             </p>
+            {showMore && (
+              <>
+                <p style={{ ...fw300, fontSize: "18px", color: "#535453", lineHeight: 1.4, margin: "16px 0 0" }}>
+                  This certification builds core knowledge of Agile values, adaptive planning, iterative work cycles, continuous feedback, and essential team collaboration practices—such as backlog prioritization, time-limited delivery cycles, progress reviews, and structured reflection sessions. Learners also develop a clear understanding of how Agile project teams organize around shared goals, manage evolving requirements, and deliver incremental value to stakeholders throughout the project lifecycle.
+                </p>
+                <p style={{ ...fw300, fontSize: "18px", color: "#535453", lineHeight: 1.4, margin: "16px 0 0" }}>
+                  Because Agile practices are widely adopted across industries—including technology, financial services, healthcare, government, and professional services—the CIPM-APMF provides a practical, transferable foundation for professionals who want to contribute effectively within adaptive project teams and pursue future growth in Agile delivery, facilitation, or project leadership roles.
+                </p>
+              </>
+            )}
+            <button
+              onClick={() => setShowMore(!showMore)}
+              style={{
+                marginTop: "16px",
+                backgroundColor: "transparent",
+                border: "none",
+                color: theme.primary,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "8px 0",
+                ...fw400,
+                fontSize: "16px",
+              }}
+            >
+              {showMore ? "Show Less" : "Read More"}
+              <IconArrowRight color={theme.primary} size={16} />
+            </button>
           </div>
           <InfoCard />
         </div>
@@ -227,15 +286,12 @@ function AudienceIconWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        backgroundColor: "white",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         width: "76px",
         height: "76px",
-        borderRadius: "72px",
         flexShrink: 0,
-        padding: "12px",
       }}
     >
       {children}
@@ -245,8 +301,9 @@ function AudienceIconWrapper({ children }: { children: React.ReactNode }) {
 
 function GradCapSvg() {
   return (
-    <div style={{ width: "52px", height: "34px", position: "relative", overflow: "hidden" }}>
-      <svg viewBox="0 0 52 33.9007" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fill="none">
+    <svg width="76" height="76" viewBox="0 0 76 76" fill="none">
+      <circle cx="38" cy="38" r="38" fill="white"/>
+      <g transform="translate(12, 21)">
         <path d={svgPaths.p1c7de700} fill="#FFC244" />
         <path d={svgPaths.pb8a0140} fill="#FFD05B" />
         <path d={svgPaths.p2b67eb00} fill="#FFC244" />
@@ -256,15 +313,16 @@ function GradCapSvg() {
         <path d={svgPaths.p2f7dbe00} fill="#615260" />
         <path d={svgPaths.p10251300} fill="#FFE077" />
         <path d={svgPaths.p20f5af00} fill="#4E3D4D" />
-      </svg>
-    </div>
+      </g>
+    </svg>
   );
 }
 
 function LaptopSvg() {
   return (
-    <div style={{ width: "47px", height: "37px", position: "relative", overflow: "hidden" }}>
-      <svg viewBox="0 0 47.0812 37.3459" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fill="none">
+    <svg width="76" height="76" viewBox="0 0 76 76" fill="none">
+      <circle cx="38" cy="38" r="38" fill="white"/>
+      <g transform="translate(14.5, 19.5)">
         <path d={svgPaths.p7ff4400} fill="#DFD0C9" />
         <path d={svgPaths.p320097b0} fill="#B4AAAA" />
         <path d={svgPaths.p27a05800} fill="#4E3D4D" />
@@ -272,15 +330,16 @@ function LaptopSvg() {
         <path d={svgPaths.p2ab27800} fill="#EBDED9" />
         <path d={svgPaths.p1b9e4000} fill="#DAD0CB" />
         <path d={svgPaths.p1ff6300} fill="#DAD0CB" />
-      </svg>
-    </div>
+      </g>
+    </svg>
   );
 }
 
 function BriefcaseSvg() {
   return (
-    <div style={{ width: "47px", height: "40px", position: "relative", overflow: "hidden" }}>
-      <svg viewBox="0 0 47.081 39.6231" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fill="none">
+    <svg width="76" height="76" viewBox="0 0 76 76" fill="none">
+      <circle cx="38" cy="38" r="38" fill="white"/>
+      <g transform="translate(14.5, 18)">
         <path d={svgPaths.pd65f900} fill="#F29F5C" />
         <path d={svgPaths.pe7a9300} fill="#E08546" />
         <path d={svgPaths.p15e8100} fill="#E08546" />
@@ -293,8 +352,8 @@ function BriefcaseSvg() {
         <path d={svgPaths.p6f7e00} fill="#E59F6A" />
         <path d={svgPaths.p14f7b800} fill="#5C9CEE" />
         <path d={svgPaths.p2fe76e80} fill="#F2DF33" />
-      </svg>
-    </div>
+      </g>
+    </svg>
   );
 }
 
@@ -323,7 +382,7 @@ function CertificateForSection() {
     <div style={{ display: "flex", minHeight: "510px" }}>
       <div style={{ width: "50%", overflow: "hidden", flexShrink: 0 }}>
         <img
-          src={imgCipmPmfc1}
+          src={imgApmf1}
           alt="Certificate"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -345,18 +404,23 @@ function CertificateForSection() {
         <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
           <AudienceItem
             icon={<GradCapSvg />}
-            title="Absolute Beginners"
-            description="Individuals with zero prior project management experience who want a structured, credible entry point into the industry."
+            title="Beginners"
+            description="Beginners seeking a credible introduction to Agile project management"
           />
           <AudienceItem
             icon={<LaptopSvg />}
-            title="New Project Managers"
-            description={`Those recently promoted or assigned to manage projects who need to quickly learn the "rules of the road."`}
+            title="Project Team Members"
+            description="Project team members who want to understand Agile practices and contribute more effectively in adaptive environments"
           />
           <AudienceItem
             icon={<BriefcaseSvg />}
-            title="Career Switchers"
-            description="Professionals from other sectors (Admin, Sales, IT) looking to pivot into a high-demand project management career path."
+            title="Coordination & Operations Professionals"
+            description="Professionals in coordination, operations, or support roles preparing to transition into Agile delivery teams"
+          />
+          <AudienceItem
+            icon={<BriefcaseSvg />}
+            title="Future Certification Seekers"
+            description="Individuals looking to build a strong Agile foundation before pursuing advanced certifications in Agile project leadership"
           />
         </div>
       </div>
@@ -409,18 +473,20 @@ function TopicItem({ number, text }: { number: string; text: string }) {
 
 function TopicsSection() {
   const topics = [
-    { n: "1", t: "Core project management terminology and key concepts." },
-    { n: "2", t: "Essential planning methodologies and frameworks." },
-    { n: "3", t: "Project lifecycle processes and delivery practices." },
-    { n: "4", t: "Effective communication and team coordination fundamentals." },
-    { n: "5", t: "Cross-industry project execution and management principles." },
+    { n: "1", t: "Core Agile values, principles, and mindset for adaptive project delivery." },
+    { n: "2", t: "Iterative planning, time-limited delivery cycles, and backlog prioritization." },
+    { n: "3", t: "Continuous feedback, progress reviews, and structured reflection sessions." },
+    { n: "4", t: "Team collaboration practices and organizing around shared goals." },
+    { n: "5", t: "Managing evolving requirements and delivering incremental stakeholder value." },
   ];
 
   return (
     <div style={{ backgroundColor: "white" }}>
       <div style={{ ...innerContainer, paddingTop: "56px", paddingBottom: "56px" }}>
         <div style={{ display: "flex", gap: "65px", alignItems: "center", minHeight: "438px" }}>
-          <BalloonIllustration />
+          <div style={{ width: "203px", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img src={icoApmf} alt="APMF Icon" style={{ width: "100%", height: "auto", objectFit: "contain" }} />
+          </div>
           <div style={{ flex: 1 }}>
             <p style={{ ...fw600, fontSize: "28px", color: "#373837", lineHeight: 1.2, margin: "0 0 16px" }}>
               What are the main topics covered in this program?
@@ -619,7 +685,7 @@ function StepIconWrapper({ children }: { children: React.ReactNode }) {
         justifyContent: "center",
         width: "64px",
         height: "64px",
-        borderRadius: "56px",
+        borderRadius: "50%",
         flexShrink: 0,
       }}
     >
@@ -630,12 +696,10 @@ function StepIconWrapper({ children }: { children: React.ReactNode }) {
 
 function CertSmallIcon() {
   return (
-    <div style={{ position: "relative", width: "32px", height: "32px" }}>
-      <div style={{ position: "absolute", inset: "8.33% 4.17% 2.08% 12.5%" }}>
-        <svg viewBox="0 0 26.6667 28.6667" style={{ width: "100%", height: "100%" }} fill="none">
-          <path d={svgPaths.p7f21900} fill={theme.primary} />
-        </svg>
-      </div>
+    <div style={{ position: "relative", width: "48px", height: "48px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <svg viewBox="0 0 26.6667 28.6667" style={{ width: "100%", height: "100%" }} fill="none">
+        <path d={svgPaths.p7f21900} fill={theme.primary} />
+      </svg>
     </div>
   );
 }
@@ -644,7 +708,7 @@ function EasyJoinSection() {
   const steps = [
     {
       icon: (
-        <svg width={32} height={32} viewBox="0 0 32 32" fill="none">
+        <svg width={48} height={48} viewBox="0 0 32 32" fill="none">
           <path d={svgPaths.p1572fa80} fill={theme.primary} />
         </svg>
       ),
@@ -653,7 +717,7 @@ function EasyJoinSection() {
     },
     {
       icon: (
-        <svg width={32} height={32} viewBox="0 0 32 32" fill="none">
+        <svg width={48} height={48} viewBox="0 0 32 32" fill="none">
           <path d={svgPaths.p3ccf5900} fill={theme.primary} />
         </svg>
       ),
@@ -662,7 +726,7 @@ function EasyJoinSection() {
     },
     {
       icon: (
-        <svg width={32} height={32} viewBox="0 0 32 32" fill="none">
+        <svg width={48} height={48} viewBox="0 0 32 32" fill="none">
           <path d={svgPaths.p27aee580} fill={theme.primary} />
         </svg>
       ),
@@ -735,55 +799,192 @@ function EasyJoinSection() {
 
 function CTABanner() {
   return (
-    <div style={{ backgroundColor: theme.primary, padding: "56px 0", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden", opacity: 0.05 }}>
+    <div style={{ backgroundColor: theme.primary, position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <svg
           viewBox="0 0 1448 1375"
-          preserveAspectRatio="xMidYMid meet"
-          style={{ position: "absolute", width: "100%", height: "100%" }}
+          preserveAspectRatio="xMidYMid slice"
+          style={{ position: "absolute", width: "60%", height: "auto", minHeight: "300%" }}
         >
-          <path clipRule="evenodd" fillRule="evenodd" d={svgPaths.p2c7ce900} fill="white" />
+          <path clipRule="evenodd" fillRule="evenodd" d={svgPaths.p2c7ce900} fill="white" opacity="0.05" />
         </svg>
       </div>
-      <div style={{ ...innerContainer, position: "relative" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "40px" }}>
-          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
-            <svg width={43} height={42} viewBox="0 0 43 42" fill="none">
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", padding: "56px 246px", gap: "150px", isolation: "isolate", position: "relative" }}>
+        <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <svg width={56} height={56} viewBox="0 0 43 42" fill="none">
               <path clipRule="evenodd" fillRule="evenodd" d={svgPaths.p129a1600} fill="white" opacity="0.9" />
             </svg>
-            <div>
-              <p style={{ ...fw400, fontSize: "32px", color: "white", lineHeight: 1.2, margin: "0 0 4px" }}>
-                Lead the Future of Work
-              </p>
-              <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-                <span style={{ ...fw300, fontSize: "16px", color: theme.bg, lineHeight: 1.4 }}>
-                  Join CIPM-APMF For only total Fee
-                </span>
-                <span style={{ ...fw600, fontSize: "18px", color: theme.bg, lineHeight: 1.2 }}>$300</span>
+          </div>
+          <div>
+            <p style={{ ...fw400, fontSize: "32px", color: "white", lineHeight: 1.2, margin: "0 0 4px" }}>
+              Lead the Future of Work
+            </p>
+            <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+              <span style={{ ...fw300, fontSize: "16px", color: theme.bg, lineHeight: 1.4 }}>
+                Join CIPM-APMF For only total Fee
+              </span>
+              <span style={{ ...fw600, fontSize: "18px", color: theme.bg, lineHeight: 1.2 }}>$200</span>
+            </div>
+          </div>
+        </div>
+        <button
+          style={{
+            backgroundColor: theme.bg,
+            color: "#3F003F",
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "16px 16px 16px 24px",
+            borderRadius: "12px",
+            height: "56px",
+            ...fw400,
+            fontSize: "18px",
+            lineHeight: 1.4,
+            border: "none",
+            cursor: "pointer",
+            flexShrink: 0,
+          }}
+        >
+          Register Now
+          <IconArrowRight color="#3F003F" size={24} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function OtherProgramsSlider() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
+
+  const slides = [
+    { logo: img06SmfcBadgeLogo, icon: icoApmf, code: 'CIPM-APMF', title: 'Agile Project Management Foundation', heading: 'Your Foundation in Agile Project Delivery', desc: 'Build a practical understanding of Agile principles, iterative delivery, and collaborative project practices.', route: '/cert-apmf' },
+    { logo: img04SmacBadgeLogo, icon: icoApma, code: 'CIPM-APMA', title: 'Agile Project Management Advanced', heading: 'Your Path to Advanced Agile Leadership', desc: 'Strengthen your ability to lead enterprise agile adoption and drive organizational transformation.', route: '/cert-apma' },
+    { logo: img05SmccBadgeLogo, icon: icoAppc, code: 'CIPM-APPC', title: 'Agile Project Practitioner Certificate', heading: 'Your Next Step in Agile Project Leadership', desc: 'Build the applied skills to lead Agile project teams with confidence and navigate complexity.', route: '/cert-appc' },
+  ];
+
+  const handleNext = () => setActiveIndex((p) => (p + 1) % slides.length);
+  const handlePrev = () => setActiveIndex((p) => (p - 1 + slides.length) % slides.length);
+
+  const slide = slides[activeIndex];
+
+  function getBadgeStyle(index: number): React.CSSProperties {
+    let offset = (index - activeIndex) % 3;
+    if (offset < -1) offset += 3;
+    if (offset > 1) offset -= 3;
+    switch (offset) {
+      case -1: return { transform: 'translateX(116px) translateY(168px)', width: '72px', height: '88px', opacity: 0.6, zIndex: 10 };
+      case 0: return { transform: 'translateX(414px) translateY(87px)', width: '210px', height: '250px', opacity: 1, zIndex: 20, filter: 'drop-shadow(0px 0px 30px rgba(160,46,160,0.54))' };
+      case 1: return { transform: 'translateX(1414px) translateY(168px)', width: '68px', height: '84px', opacity: 0.6, zIndex: 10 };
+      default: return { transform: 'translateX(241px) translateY(173px)', width: '83px', height: '77px', opacity: 0.6, zIndex: 10 };
+    }
+  }
+
+  return (
+    <div style={{ backgroundColor: 'white', padding: '112px 0', overflow: 'hidden' }}>
+      <div style={{ maxWidth: '1728px', margin: '0 auto', position: 'relative', height: '429px' }}>
+        <div
+          style={{
+            position: 'absolute',
+            left: '372px',
+            top: '75px',
+            width: '984px',
+            height: '274px',
+            backgroundColor: theme.bg,
+            borderRadius: '137px',
+            boxShadow: `3px 13px 30px 0px ${theme.shadow}`,
+            transition: 'background-color 0.5s',
+          }}
+        />
+
+        <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: 0, width: '936px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 30 }}>
+          <p style={{ ...fw600, fontSize: '36px', color: '#272827', lineHeight: 1.2, margin: 0, whiteSpace: 'nowrap' }}>
+            Other programs in the same category
+          </p>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexShrink: 0 }}>
+            <button onClick={handlePrev} style={{ cursor: 'pointer', display: 'flex', height: '32px', alignItems: 'center', justifyContent: 'center', padding: '16px', borderRadius: '56px', flexShrink: 0, border: 'none', background: 'transparent' }}>
+              <svg width={24} height={24} fill="none" viewBox="0 0 24 24"><path d={svgPathsSlider.p357c6700} fill="#666766" /></svg>
+            </button>
+            <button onClick={handleNext} style={{ cursor: 'pointer', display: 'flex', height: '32px', alignItems: 'center', justifyContent: 'center', padding: '16px', borderRadius: '56px', flexShrink: 0, border: 'none', background: 'transparent' }}>
+              <svg width={24} height={24} fill="none" viewBox="0 0 24 24"><path d={svgPathsSlider.p32c88600} fill="#666766" /></svg>
+            </button>
+          </div>
+        </div>
+
+        {slides.map((s, i) => (
+          <div key={i} style={{ position: 'absolute', left: 0, top: 0, transition: 'all 0.5s ease-in-out', ...getBadgeStyle(i) }}>
+            <img alt={s.code} src={s.logo} style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+          </div>
+        ))}
+
+        <div style={{ position: 'absolute', left: 0, top: '155px', width: '372px', height: '114px', background: 'linear-gradient(to right, white, transparent)', pointerEvents: 'none', zIndex: 30 }} />
+        <div style={{ position: 'absolute', left: '1356px', top: '155px', width: '372px', height: '114px', background: 'linear-gradient(to left, white, transparent)', pointerEvents: 'none', zIndex: 30 }} />
+
+        <div style={{ position: 'absolute', left: '656px', top: '87px', width: '652px', height: '250px', display: 'flex', gap: '24px', alignItems: 'center', zIndex: 30 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'flex-end', paddingRight: '16px', width: '100%' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start', width: '100%', whiteSpace: 'nowrap' }}>
+                <p style={{ ...fw600, fontSize: '36px', color: theme.primary, lineHeight: 1.2, margin: 0, transition: 'color 0.5s' }}>
+                  {slide.code}
+                </p>
+                <p style={{ ...fw300, fontSize: '18px', color: '#373837', lineHeight: 1.4, margin: 0 }}>
+                  {slide.title}
+                </p>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start', width: '100%' }}>
+                <p style={{ ...fw400, fontSize: '20px', color: theme.headingColor, lineHeight: 1.2, margin: 0, minHeight: '48px', minWidth: '100%' }}>
+                  {slide.heading}
+                </p>
+                <p style={{ ...fw300, fontSize: '16px', color: theme.primary, lineHeight: 1.4, margin: 0, width: '429px', minHeight: '44px', whiteSpace: 'normal', transition: 'color 0.5s' }}>
+                  {slide.desc}
+                </p>
               </div>
             </div>
           </div>
-          <button
-            style={{
-              backgroundColor: theme.bg,
-              color: "#3F003F",
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              padding: "16px 16px 16px 24px",
-              borderRadius: "12px",
-              height: "56px",
-              ...fw400,
-              fontSize: "18px",
-              lineHeight: 1.4,
-              border: "none",
-              cursor: "pointer",
-              flexShrink: 0,
-            }}
-          >
-            Register Now
-            <IconArrowRight color="#3F003F" size={24} />
-          </button>
+          <img src={slide.icon} alt="" style={{ width: '120px', flexShrink: 0, opacity: 0.9 }} />
+        </div>
+
+        <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '373px', width: '790px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 30 }}>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexShrink: 0 }}>
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                style={{
+                  position: 'relative',
+                  flexShrink: 0,
+                  transition: 'all 0.3s',
+                  cursor: 'pointer',
+                  border: 'none',
+                  padding: 0,
+                  width: activeIndex === i ? '94px' : '12px',
+                  height: '12px',
+                  borderRadius: '24px',
+                  backgroundColor: activeIndex !== i ? theme.bg : 'transparent',
+                }}
+              >
+                {activeIndex === i && (
+                  <>
+                    <div style={{ position: 'absolute', inset: 0, borderRadius: '24px', backgroundColor: theme.bg, transition: 'background-color 0.5s' }} />
+                    <div style={{ position: 'absolute', bottom: 0, left: 0, top: 0, width: '35px', borderRadius: '24px', backgroundColor: '#C77FD8', transition: 'all 0.5s' }} />
+                  </>
+                )}
+              </button>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexShrink: 0 }}>
+            <button onClick={() => navigate('/all-certifications')} style={{ display: 'flex', gap: '8px', height: '44px', alignItems: 'center', justifyContent: 'center', padding: '12px 16px', borderRadius: '16px', cursor: 'pointer', border: 'none', background: 'transparent' }}>
+              <span style={{ ...fw400, fontSize: '16px', color: theme.darkPrimary, lineHeight: 1.4, whiteSpace: 'nowrap' }}>
+                Explore all Certifications
+              </span>
+            </button>
+            <button onClick={() => navigate(slide.route)} style={{ display: 'flex', gap: '12px', height: '56px', alignItems: 'center', justifyContent: 'center', padding: '16px 24px 16px 24px', borderRadius: '16px', cursor: 'pointer', border: 'none', backgroundColor: theme.learnMoreBg }}>
+              <span style={{ ...fw400, fontSize: '18px', color: 'white', lineHeight: 1.4, whiteSpace: 'nowrap' }}>Learn more</span>
+              <svg width={24} height={24} fill="none" viewBox="0 0 24 24"><path d={svgPathsSlider.p3cb1b80} fill="white" /></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -805,6 +1006,7 @@ export default function CertAPMFPage() {
         <InclusionsSection />
         <EasyJoinSection />
         <CTABanner />
+        <OtherProgramsSlider />
       </div>
       <div id="site-footer" style={{ backgroundColor: 'rgba(39,40,39,1)' }}>
         <Footer />
