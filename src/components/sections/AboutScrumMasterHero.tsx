@@ -27,6 +27,14 @@ function Arrowrightsline() {
   );
 }
 
+function Ellipse142() {
+  return (
+    <svg style={{ position: 'absolute', left: '-99px', top: '756px', width: '1926px', height: '115px', zIndex: 6 }} width="1926" height="115" viewBox="0 0 1926 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="963" cy="57.5" rx="963" ry="57.5" fill="white"/>
+    </svg>
+  );
+}
+
 export default function AboutScrumMasterHero() {
   const navigate = useNavigate();
 
@@ -43,6 +51,9 @@ export default function AboutScrumMasterHero() {
 
       {/* صورة الهيرو */}
       <img src={imgHero} alt="Scrum Master" style={{ position: 'absolute', left: '0px', top: '230px', width: '1728px', height: '587px', zIndex: 4 }} />
+
+      {/* Ellipse تتقاطع مع الصورة */}
+      <Ellipse142 />
 
       <div style={{ position: 'absolute', left: '246px', top: '143px', width: '340px', height: '73px', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '24px', zIndex: 100 }}>
         <Button onClick={() => navigate('/')} />

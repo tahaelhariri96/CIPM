@@ -1,0 +1,142 @@
+.project-wrapper {
+  position: relative;
+  max-width: 1926px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  overflow: visible;
+  font-family: sans-serif;
+}
+
+.project-bg-ellipse {
+  position: absolute;
+  width: 1926px;
+  height: 115px;
+  left: -99px;
+  top: 839px;
+  z-index: 0;
+}
+
+.project-side-cards {
+  position: absolute;
+  width: 390.05px;
+  height: 425.28px;
+  right: 183px;
+  top: -450px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.project-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  padding: 50px 20% 70px 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #373837;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.project-header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #535453;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.project-body {
+  background-color: #f6f6f6;
+  padding: 72px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.project-reasons-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-reasons-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #272827;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.project-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-list-line {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background-color: #e3c2e3;
+  z-index: 0;
+}
+
+.project-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-list-bullet {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #a02ea0;
+  background-color: #ffffff;
+  margin-top: 5px;
+}
+
+.project-list-text {
+  font-size: 18px;
+  font-weight: 300;
+  color: #373837;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .project-header {
+    padding: 80px 5% 40px 5%;
+  }
+  .project-body {
+    padding: 40px 5%;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .project-side-cards {
+    opacity: 0.15;
+  }
+}
