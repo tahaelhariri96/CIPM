@@ -1,11 +1,14 @@
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import AboutCIPMHero from '../components/sections/AboutCIPMHero';
+import AboutCIPMIntroSection from '../components/sections/AboutCIPMIntroSection';
+import Frame2608792 from '../components/sections/Frame2608792';
+import Frame2608961 from '../components/sections/Frame2608961';
+import Frame2608969 from '../components/sections/Frame2608969';
+import Frame2608959 from '../components/sections/Frame2608959';
+import ProjectManagement from '../components/sections/ProjectManagement';
+import Frame2608970 from '../components/sections/Frame2608970';
 import AboutCIPMContent from '../components/sections/AboutCIPMContent';
-import frame2608841Svg from '../assets/Group 2509.svg';
-
-const SVG_TOTAL_H = 4526;
-const SVG_W = 1728;
 
 export default function AboutCIPMPage() {
   return (
@@ -18,19 +21,13 @@ export default function AboutCIPMPage() {
       {/* Hero */}
       <AboutCIPMHero />
 
-      {/* المحتوى */}
-      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '400px' }}>
-        <img
-          src={frame2608841Svg}
-          alt=""
-          style={{
-            width: `${SVG_W}px`,
-            height: `${SVG_TOTAL_H}px`,
-            display: 'block',
-            maxWidth: 'none',
-          }}
-        />
-      </div>
+      <AboutCIPMIntroSection />
+      <Frame2608792 />
+      <Frame2608961 />
+      <Frame2608969 />
+      <Frame2608959 />
+      <ProjectManagement />
+      <Frame2608970 />
 
       {/* Contact */}
       <AboutCIPMContent />
