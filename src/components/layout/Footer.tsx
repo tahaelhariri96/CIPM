@@ -32,8 +32,8 @@ const COMPANY_LINKS = [
 ];
 const LEGAL_LINKS = [
   { label: 'Contact Us', href: '/contact' },
-  { label: 'Terms of Use', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'Terms of Use', href: '/terms-of-use' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
 ];
 
 // ── مكوّن رابط واحد ───────────────────────────────────────────────────────────

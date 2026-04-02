@@ -16,6 +16,8 @@ const AboutScrumMasterPage = lazy(() => import('../pages/AboutScrumMaster'));
 const AboutMockExamPage = lazy(() => import('../pages/AboutMockExam'));
 const InsightsPage = lazy(() => import('../pages/Insights'));
 const ContactPage = lazy(() => import('../pages/Contact'));
+const PrivacyPolicyPage = lazy(() => import('../pages/PrivacyPolicy'));
+const TermsOfUsePage = lazy(() => import('../pages/TermsOfUse'));
 const CertPMFCPage = lazy(() => import('../pages/CertPMFC'));
 const CertPMCCPage = lazy(() => import('../pages/CertPMCC'));
 const CertPMACPage = lazy(() => import('../pages/CertPMAC'));
@@ -140,6 +142,8 @@ export default function App() {
               <Route path="/about-mock-exam" element={<AboutMockExamPage />} />
               <Route path="/insights" element={<InsightsPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-of-use" element={<TermsOfUsePage />} />
               <Route path="/cert-pmfc" element={<CertPMFCPage />} />
               <Route path="/cert-pmcc" element={<CertPMCCPage />} />
               <Route path="/cert-pmac" element={<CertPMACPage />} />
