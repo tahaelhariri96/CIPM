@@ -254,14 +254,6 @@ function FooterBottom() {
         <p className="font-['Poppins:Light',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#fdfdfd] text-[14px] text-right whitespace-pre" dir="auto">
           {`CIMP @2026  - All right reserved`}
         </p>
-        <div className="relative shrink-0 size-[8px]">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8 8">
-            <circle cx="4" cy="4" fill="var(--fill-0, #FDFDFD)" r="4" />
-          </svg>
-        </div>
-        <p className="font-['Poppins:Light',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#fdfdfd] text-[14px] text-right whitespace-nowrap">
-          Design with ♥ by Adnan Akhras
-        </p>
       </div>
 
       {/* Email subscription */}
