@@ -1,6 +1,9 @@
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import InsightsHero from '../components/sections/InsightsHero';
+import InsightsSearchBar from '../components/sections/InsightsSearchBar';
+import InsightsBlogGrid from '../components/sections/InsightsBlogGrid';
+import LoadMoreButton from '../components/sections/LoadMoreButton';
 import AboutCIPMContent from '../components/sections/AboutCIPMContent';
 import groupIn7Svg from '../assets/Group in7.svg';
 
@@ -16,18 +19,11 @@ export default function InsightsPage() {
 
       <InsightsHero />
 
-      <div style={{ width: '1728px', display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 9999, marginTop: '48px' }}>
-        <img
-          src={groupIn7Svg}
-          alt=""
-          style={{
-            width: `${SVG_W}px`,
-            height: `${SVG_H}px`,
-            display: 'block',
-            maxWidth: 'none',
-          }}
-        />
-      </div>
+      <InsightsSearchBar />
+
+      <InsightsBlogGrid />
+
+      <LoadMoreButton />
 
   <div style={{
             width: `${SVG_W}px`,

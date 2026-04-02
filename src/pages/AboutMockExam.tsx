@@ -1,11 +1,13 @@
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import AboutMockExamHero from '../components/sections/AboutMockExamHero';
+import Frame2608896 from '../components/sections/Frame2608896';
+import Frame2609166 from '../components/sections/Frame2609166';
+import Frame2608954 from '../components/sections/Frame2608954';
+import Frame2609167 from '../components/sections/Frame2609167';
+import MockExamCTA from '../components/sections/MockExamCTA';
+import MockExamArticles from '../components/sections/MockExamArticles';
 import AboutCIPMContent from '../components/sections/AboutCIPMContent';
-import group2511Svg from '../assets/Group 2511.svg';
-
-const SVG_TOTAL_H = 2420;
-const SVG_W = 1728;
 
 export default function AboutMockExamPage() {
   return (
@@ -16,18 +18,12 @@ export default function AboutMockExamPage() {
 
       <AboutMockExamHero />
 
-      <div style={{ width: `${SVG_W}px`, position: 'relative', zIndex: 9999, marginTop: '530px' }}>
-        <img
-          src={group2511Svg}
-          alt=""
-          style={{
-            width: `${SVG_W}px`,
-            height: `${SVG_TOTAL_H}px`,
-            display: 'block',
-            maxWidth: 'none',
-          }}
-        />
-      </div>
+      <Frame2608896 />
+      <Frame2609166 />
+      <Frame2608954 />
+      <Frame2609167 />
+      <MockExamCTA />
+      <MockExamArticles />
 
       <AboutCIPMContent />
 

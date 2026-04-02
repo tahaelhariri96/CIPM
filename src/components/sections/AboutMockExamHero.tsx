@@ -31,15 +31,26 @@ export default function AboutMockExamHero() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '267px', overflow: 'visible' }}>
-      <div style={{ position: 'absolute', left: '-99px', top: '0px', width: '1926px', height: '267px', zIndex: 5, pointerEvents: 'none' }}>
+    <div style={{ position: 'relative', width: '100%', height: '850px', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', left: '-99px', top: '0px', width: '1926px', zIndex: 5, pointerEvents: 'none' }}>
         <svg style={{ display: 'block', width: '100%', height: '100%' }} fill="none" preserveAspectRatio="none" viewBox="0 0 1926 267">
           <path d="M1827 200C1890.38 209 1926 220 1926 230C1926 248 1494.85 267 963 267C431.15 267 0 248 0 230C0 220 35.6153 209 99 200V0H1827V200Z" fill="#BA0E0E" />
           <path clipRule="evenodd" fillRule="evenodd" d={svgPaths.p3ec22500} fill="white" opacity="0.15" />
         </svg>
       </div>
 
-      <img src={imgHero} alt="Mock Exam" style={{ position: 'absolute', left: '0px', top: '230px', width: '1728px', height: '615px', zIndex: 4 }} />
+      <img src={imgHero} alt="Mock Exam" style={{ position: 'absolute', left: '0px', top: '230px', width: '1728px', zIndex: 0 }} />
+
+      <svg style={{ position: 'absolute', left: '0px', top: '280px', width: '1728px', overflow: 'hidden', zIndex: 1 }} width="1728" height="587" viewBox="0 0 1728 587" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clipPath="url(#clip0_mock_exam_hero_curve)">
+          <ellipse cx="864" cy="587.5" rx="963" ry="57.5" fill="white" />
+        </g>
+        <defs>
+          <clipPath id="clip0_mock_exam_hero_curve">
+            <rect width="1728" height="587" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
 
       <div style={{ position: 'absolute', left: '246px', top: '143px', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '24px', zIndex: 100 }}>
         <Button onClick={() => navigate('/')} />
