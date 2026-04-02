@@ -28,7 +28,7 @@ const COMPANY_LINKS = [
   { label: 'About THE CIPM', href: '/about-cipm' },
   { label: 'About Mock Exam', href: '/about-mock-exam' },
   { label: 'About Project Management', href: '/about-project-management' },
-  { label: 'About Agile Project Management', href: '/about-scrum-master' },
+  { label: 'About Agile Project Management', href: '/about-agile-project-management' },
 ];
 const LEGAL_LINKS = [
   { label: 'Contact Us', href: '/contact' },

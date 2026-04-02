@@ -1,7 +1,7 @@
 import React from 'react';
 import image0 from '../assets/06. SMFC Badge Logog.svg';
-import image1 from '../assets/04. SMAC Badge Logo.svg';
-import image2 from '../assets/05. SMCC Badge Logo.svg';
+import image1 from '../assets/01. PMAC Badge Logo 2.svg';
+import image2 from '../assets/02. PMCC Badge Logo 1.svg';
 
 export default function Frame2609262() {
   return (

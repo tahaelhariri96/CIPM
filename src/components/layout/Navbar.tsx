@@ -19,7 +19,7 @@ const ABOUT_ITEMS = [
   { id: 1, title: 'About THE CIPM',            href: '/about-cipm' },
   { id: 2, title: 'About Mock Exam',            href: '/about-mock-exam' },
   { id: 3, title: 'About Project Management',   href: '/about-project-management' },
-  { id: 4, title: 'About Agile Project Management', href: '/about-scrum-master' },
+  { id: 4, title: 'About Agile Project Management', href: '/about-agile-project-management' },
 ];
 
 // ── أيقونات ───────────────────────────────────────────────────────────────────

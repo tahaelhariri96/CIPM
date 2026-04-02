@@ -1,10 +1,10 @@
 import './ProjectCuriosityToCredential.css';
-import objectsIcon from '../../assets/objects.svg';
+import objectsIcon from '../../assets/Group 2482.svg';
 
 export default function ProjectCuriosityToCredential() {
   return (
     <section className="section-wrapper">
-      <div className="card">
+      <div className="card" >
         <div className="card__content">
           <h2 className="card__title">
             From Understanding to Action
@@ -20,7 +20,7 @@ export default function ProjectCuriosityToCredential() {
           </div>
         </div>
 
-        <div className="decor">
+        <div className="decor" style={{  position: "absolute",  right: "100px",  top: "-50px",  width: "219px", height: "321px",transform: "scale(1.7)"}} >
           <img className="decor__img" src={objectsIcon} alt="Decorative graphic"/>
         </div>
       </div>

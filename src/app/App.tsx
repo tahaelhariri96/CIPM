@@ -136,7 +136,7 @@ export default function App() {
               <Route path="/about-cipm" element={<AboutCIPMPage />} />
               <Route path="/all-certifications" element={<AllCertificationsPage />} />
               <Route path="/about-project-management" element={<AboutProjectManagementPage />} />
-              <Route path="/about-scrum-master" element={<AboutScrumMasterPage />} />
+              <Route path="/about-agile-project-management" element={<AboutScrumMasterPage />} />
               <Route path="/about-mock-exam" element={<AboutMockExamPage />} />
               <Route path="/insights" element={<InsightsPage />} />
               <Route path="/contact" element={<ContactPage />} />

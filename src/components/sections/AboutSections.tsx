@@ -74,7 +74,7 @@ export default function AboutSections() {
               A Scrum Master is an Agile servant-leader who facilitates collaboration, removes impediments, and empowers teams to self-organize and deliver value through continuous improvement.
             </p>
           </div>
-          <button style={learnBtn} onClick={() => navigate('/about-scrum-master')}>Learn more</button>
+          <button style={learnBtn} onClick={() => navigate('/about-agile-project-management')}>Learn more</button>
         </div>
         <div style={{ width: '726px', overflow: 'hidden', flexShrink: 0 }}>
           <img src={imgAboutScrum} alt="About Scrum Master" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
